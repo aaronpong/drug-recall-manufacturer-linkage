@@ -1,0 +1,12 @@
+reason_category,reason_label,mftr_events,pct_of_mftr_events,other_events,pct_of_other_events,all_events,class1_events,pct_class1
+potency_dissolution,Potency Dissolution,569,23.2,350,15.2,919,51,5.5
+chemical_contamination,Chemical Contamination,495,20.2,269,11.7,764,38,5.0
+labeling_packaging,Labeling Packaging,374,15.2,318,13.8,692,90,13.0
+sterility_assurance,Sterility Assurance,190,7.7,330,14.3,520,27,5.2
+particulate_foreign_matter,Particulate Foreign Matter,366,14.9,138,6.0,504,133,26.4
+cgmp_manufacturing,Cgmp Manufacturing,147,6.0,274,11.9,421,4,1.0
+unapproved_or_undeclared,Unapproved Or Undeclared,11,0.4,276,12.0,287,196,68.3
+storage_stability,Storage Stability,133,5.4,96,4.2,229,10,4.4
+microbial_contamination,Microbial Contamination,47,1.9,181,7.9,228,94,41.2
+cross_contamination,Cross Contamination,96,3.9,60,2.6,156,15,9.6
+other,Other,28,1.1,13,0.6,41,0,0.0

@@ -1,0 +1,5 @@
+spend_quartile,quartile_label,manufacturers,pct_with_any_recall,avg_recall_events
+1,Q1 (lowest),221,12.7,0.75
+2,Q2,221,15.4,1.53
+3,Q3,221,21.3,2.23
+4,Q4 (highest),220,44.1,6.57
