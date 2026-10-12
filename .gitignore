@@ -218,3 +218,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project data (raw API pulls stay local)
+data/raw/
+
+# Editor and OS files
+.vscode/
+.DS_Store
