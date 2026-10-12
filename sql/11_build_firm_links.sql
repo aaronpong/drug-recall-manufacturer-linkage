@@ -10,7 +10,8 @@ LEFT JOIN linkage.match_decisions d
        ON d.firm_norm = c.firm_norm
       AND d.mftr_name = c.mftr_name
 WHERE c.candidate_rank = 1
-  AND (c.method = 'exact_key' OR d.decision = 'y');
+  AND (   (c.method = 'exact_key' AND COALESCE(d.decision, 'y') <> 'n')
+       OR d.decision = 'y');
 
 ALTER TABLE linkage.firm_manufacturer ADD PRIMARY KEY (firm_id);
 

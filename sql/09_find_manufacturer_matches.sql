@@ -92,7 +92,7 @@ pairs AS (
                -- CMS name cut short: CMS key can end mid-word
                WHEN LENGTH(m.mkey) >= 6 AND f.fkey LIKE m.mkey || '%' THEN 'prefix'
                -- Firm name shorter: must end on a whole word (stops ASCEND -> ASCENDIS)
-               WHEN LENGTH(f.fkey) >= 6 AND m.mkey LIKE f.fkey || ' %' THEN 'prefix'
+               WHEN LENGTH(f.fkey) >= 4 AND m.mkey LIKE f.fkey || ' %' THEN 'prefix'
                WHEN similarity(f.fkey, m.mkey) >= 0.5 THEN 'fuzzy'
            END AS method
     FROM f CROSS JOIN m

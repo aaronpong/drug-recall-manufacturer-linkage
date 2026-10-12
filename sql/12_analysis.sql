@@ -98,3 +98,12 @@ FROM analysis.recalls_enriched
 WHERE recall_year BETWEEN 2012 AND 2025
 GROUP BY recall_year
 ORDER BY recall_year;
+
+-- Q6. Share of recall events that are Class I: Part D manufacturers vs. other firms
+SELECT CASE WHEN mftr_id IS NULL THEN 'Other firms' ELSE 'Part D manufacturers' END AS firm_group,
+       COUNT(DISTINCT event_id) AS events,
+       COUNT(DISTINCT event_id) FILTER (WHERE classification = 'Class I') AS class1_events,
+       ROUND(100.0 * COUNT(DISTINCT event_id) FILTER (WHERE classification = 'Class I')
+             / COUNT(DISTINCT event_id), 1) AS pct_class1
+FROM analysis.recalls_enriched
+GROUP BY 1;
